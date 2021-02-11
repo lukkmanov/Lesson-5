@@ -1,0 +1,81 @@
+#ifndef FUNCTION_H
+#define FUNCTION_H
+#include <iostream>
+
+void massiv(int n)
+{
+    std::cout << "Assignment 1 " << std::endl;
+    int a[10];
+    for (int i = 0 ; i<n ;i++ )
+     {
+        a[i] = rand() % 2 ;
+    std::cout << a[i] << std::endl;
+}
+    std::cout << "New array" << std::endl ;
+    for (int i = 0 ; i < n ; i++)
+    {
+        if (a[i] == 0)
+         a[i] = 1;
+         else if (a[i] == 1)
+          a[i] = 0;
+           std::cout << a[i] << std::endl;
+    }
+}
+
+void mas()
+{
+     std::cout << "Assignment 2 " << std::endl;
+int a[8] = {};
+for (int i = 0 ; i < 8 ; i++)
+{
+    a[i] = 3 * i + 1;
+     std::cout  << a[i] << std::endl;
+ }
+}
+
+bool CheckB(int arr[])
+
+{
+    std::cout << "Assignment 3 " << std::endl;
+    bool balanceE = false;
+    int arrSum = 0;
+    for  (int i = 0 ; i < *arr ; i++)
+    {
+        arrSum += arr[i];
+    }
+    int right = 0;
+    for (int i = 0 ; i < *arr ; i++)
+    {
+        right += arr[i];
+        if (right == arrSum - right)
+        {
+            balanceE = true;
+           std::cout << "Balance true"  << std::endl ;
+
+        }
+    }
+
+    return balanceE;
+}
+
+void shift (int n)
+{
+    std::cout << "Assignment 4 " << std::endl;
+    int a[6] = {1,2,3,4,5,6};
+         for (int z = 1; z <= n ; z++)
+        {
+                int tm = a[0];
+            for (int i = 0; i < 6 ; i++)
+            {
+                a[i] = a[i + 1];
+            }
+                a[5] = tm;
+        }
+    for (int i = 0 ; i < 6 ; i++)
+    {
+       std::cout << a[i] << std::endl ;
+    }
+}
+
+
+#endif // FUNCTION_H
