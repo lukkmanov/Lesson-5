@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+void massiv(int n)
+{
+
+    int a[10];
+    for (int i = 0 ; i<n ;i++ )
+     {
+        a[i] = rand() % 2 ;
+    cout << a[i] << endl;
+}
+    cout << "New array" << endl ;
+    for (int i = 0 ; i < n ; i++)
+    {
+        if (a[i] == 0)
+         a[i] = 1;
+         else if (a[i] == 1)
+          a[i] = 0;
+            cout << a[i] << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter the length of the array ";
+    cin >> n;
+    massiv(n);
+    return 0;
+}
