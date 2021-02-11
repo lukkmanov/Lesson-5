@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+  bool CheckB(int arr[])
+
+  {
+      bool balanceE = false;
+      int arrSum = 0;
+      for  (int i = 0 ; i < *arr ; i++)
+      {
+          arrSum += arr[i];
+      }
+      int right = 0;
+      for (int i = 0 ; i < *arr ; i++)
+      {
+          right += arr[i];
+          if (right == arrSum - right)
+          {
+              balanceE = true;
+              cout << "Balance true"  << endl ;
+
+          }
+      }
+
+      return balanceE;
+  }
+
+int main()
+{
+    int arr[10] = {3,2,1,3,3};
+    CheckB(arr);
+    return 0;
+}
